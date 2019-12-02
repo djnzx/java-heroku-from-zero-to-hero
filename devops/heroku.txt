@@ -11,7 +11,7 @@ http://localhost:5000
 
 3. heroku login
 4. heroku create
-https://xxxxxxxx.herokuapp.com/
+https://safe-cliffs-57401.herokuapp.com
 https://git.heroku.com/xxxxxxxx.git
 5. git remote -v
 .... add heroku to git upstream ....
@@ -23,3 +23,5 @@ logs:
 heroku logs --tail
 git remote -v
 heroku ps
+
+
