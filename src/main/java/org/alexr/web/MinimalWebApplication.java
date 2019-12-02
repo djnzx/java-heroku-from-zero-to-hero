@@ -5,6 +5,9 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 
 /**
  * http://localhost:5000
+ *
+ * https://www.baeldung.com/executable-jar-with-maven
+ *
  */
 public class MinimalWebApplication {
   public static void main(String[] args) throws Exception {
