@@ -11,6 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jetty_version>9.4.24.v20191120</jetty_version>
     </properties>
 
     <build>
@@ -51,12 +52,12 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
-            <version>9.4.22.v20191022</version>
+            <version>${jetty_version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>9.4.22.v20191022</version>
+            <version>${jetty_version}</version>
         </dependency>
     </dependencies>
 </project>
