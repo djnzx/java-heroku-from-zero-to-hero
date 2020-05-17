@@ -26,12 +26,37 @@ origin  https://github.com/alexr007/java-heroku.git (push)
 ```
 - push your code to heroku `git push heroku master`
 
+### adding heroku database:
+- goto heroku dashboard
+- click `your app name`
+- click `Resources` 
+- in the add-ons type: `Postgres`
+- click `Heroku Postgres`
+- click `Provision`
+- click `Heroku Postgres` in the list below
+- goto `Settings`, look for `Credentials` 
+
 #### useful heroku command:
 
 - heroku ps
 - heroku open
 - heroku ps:scale web=1
 - heroku logs --tail
+
+#### Pay your attention to
+
+- `Procfile` contents:
+  - fully qualified path to the `main class`
+  - `classpath` declaration
+- `pom.xml` sections:
+  - `<packaging>jar`
+  - `<pluginns>maven-dependency-plugin...`
+
+#### note: be aware of  Heroku env variables:
+
+- `DATABASE_URL` looks like `postgres:...`  
+- `JDBC_DATABASE_URL` looks like `jdbc:postgresql:...`
+- `PORT` http port to listen
 
 ### Links
 

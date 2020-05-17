@@ -28,6 +28,14 @@ public class StepWebApp {
 
     Server server = new Server(HerokuEnv.port());
 
+    System.out.println("**********************");
+    System.out.println("**********************");
+    System.out.println(HerokuEnv.jdbc_url());
+    System.out.println("**********************");
+    System.out.println("**********************");
+
+
+
     ServletContextHandler handler = new ServletContextHandler();
     handler.addServlet(HelloServlet.class, "/hello");
     handler.addServlet(new ServletHolder(new StudentServlet(conn)), "/student");
