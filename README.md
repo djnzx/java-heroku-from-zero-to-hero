@@ -38,10 +38,10 @@ origin  https://github.com/alexr007/java-heroku.git (push)
 
 #### useful heroku command:
 
-- heroku ps
-- heroku open
-- heroku ps:scale web=1
-- heroku logs --tail
+- `heroku ps`
+- `heroku open`
+- `heroku ps:scale web=1`
+- `heroku logs --tail`
 
 #### Pay your attention to
 
