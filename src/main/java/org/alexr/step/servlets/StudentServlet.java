@@ -1,4 +1,4 @@
-package org.alexr.step;
+package org.alexr.step.servlets;
 
 import org.alexr.step.dao.DAOStudentSQL;
 import org.alexr.step.dao.Student;
@@ -13,15 +13,15 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * http://localhost:8080/hello
- * http://localhost:8080/hello?x=1
- * http://localhost:8080/hello?x=2
+ * http://localhost:8080/student
+ * http://localhost:8080/student?x=1
+ * http://localhost:8080/student?x=2
  */
-public class HelloServlet extends HttpServlet {
+public class StudentServlet extends HttpServlet {
 
   private final Connection conn;
 
-  public HelloServlet(Connection conn) {
+  public StudentServlet(Connection conn) {
     this.conn = conn;
   }
 

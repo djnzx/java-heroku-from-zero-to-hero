@@ -3,6 +3,8 @@ package org.alexr.step;
 import org.alexr.step.db.ConnDetails;
 import org.alexr.step.db.DbConn;
 import org.alexr.step.db.DbSetup;
+import org.alexr.step.servlets.HelloServlet;
+import org.alexr.step.servlets.StudentServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -11,8 +13,10 @@ import java.sql.Connection;
 
 /**
  * http://localhost:8080/hello
- * http://localhost:8080/hello?x=1
- * http://localhost:8080/hello?x=2
+ *
+ * http://localhost:8080/student
+ * http://localhost:8080/student?x=1
+ * http://localhost:8080/student?x=2
  */
 public class StepWebApp {
   public static void main(String[] args) throws Exception {
@@ -22,7 +26,8 @@ public class StepWebApp {
     Server server = new Server(8080);
 
     ServletContextHandler handler = new ServletContextHandler();
-    handler.addServlet(new ServletHolder(new HelloServlet(conn)), "/hello");
+    handler.addServlet(HelloServlet.class, "/hello");
+    handler.addServlet(new ServletHolder(new StudentServlet(conn)), "/student");
     server.setHandler(handler);
 
     server.start();
