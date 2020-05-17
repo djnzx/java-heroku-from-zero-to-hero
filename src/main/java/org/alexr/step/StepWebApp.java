@@ -22,19 +22,13 @@ public class StepWebApp {
   public static void main(String[] args) throws Exception {
     // temporary
 //    DbSetup.migrate(ConnDetails.url, ConnDetails.username, ConnDetails.password);
+    DbSetup.migrate(HerokuEnv.jdbc_url(), HerokuEnv.jdbc_username(), HerokuEnv.jdbc_password());
     // temporary
 //    Connection conn = DbConn.create(ConnDetails.url, ConnDetails.username, ConnDetails.password);
-    Connection conn = null;
+    Connection conn = DbConn.createFromURL(HerokuEnv.jdbc_url());
+//    Connection conn = null;
 
     Server server = new Server(HerokuEnv.port());
-
-    System.out.println("**********************");
-    System.out.println("**********************");
-    System.out.println(HerokuEnv.jdbc_url());
-    System.out.println("**********************");
-    System.out.println("**********************");
-
-
 
     ServletContextHandler handler = new ServletContextHandler();
     handler.addServlet(HelloServlet.class, "/hello");
