@@ -20,8 +20,11 @@ import java.sql.Connection;
  */
 public class StepWebApp {
   public static void main(String[] args) throws Exception {
-    DbSetup.migrate(ConnDetails.url, ConnDetails.username, ConnDetails.password);
-    Connection conn = DbConn.create(ConnDetails.url, ConnDetails.username, ConnDetails.password);
+    // temporary
+//    DbSetup.migrate(ConnDetails.url, ConnDetails.username, ConnDetails.password);
+    // temporary
+//    Connection conn = DbConn.create(ConnDetails.url, ConnDetails.username, ConnDetails.password);
+    Connection conn = null;
 
     Server server = new Server(8080);
 
