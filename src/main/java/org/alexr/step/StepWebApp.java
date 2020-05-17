@@ -11,7 +11,8 @@ import java.sql.Connection;
 
 /**
  * http://localhost:8080/hello
- * http://localhost:8080/hello?x=5
+ * http://localhost:8080/hello?x=1
+ * http://localhost:8080/hello?x=2
  */
 public class StepWebApp {
   public static void main(String[] args) throws Exception {
