@@ -2,5 +2,8 @@
 
 ### local project location
 
-- [http://localhost:8080/hello](http://localhost:8080/hello)
-- [http://localhost:8080/hello?x=5](http://localhost:8080/hello?x=5)
+- [servlet1](http://localhost:8080/hello)
+- [servlet2a](http://localhost:8080/hello)
+- [servlet2b](http://localhost:8080/hello?x=1)
+
+### heroku instruction
