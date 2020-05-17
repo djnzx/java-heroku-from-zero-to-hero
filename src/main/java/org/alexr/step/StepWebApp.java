@@ -26,7 +26,7 @@ public class StepWebApp {
 //    Connection conn = DbConn.create(ConnDetails.url, ConnDetails.username, ConnDetails.password);
     Connection conn = null;
 
-    Server server = new Server(8080);
+    Server server = new Server(HerokuEnv.port());
 
     ServletContextHandler handler = new ServletContextHandler();
     handler.addServlet(HelloServlet.class, "/hello");
