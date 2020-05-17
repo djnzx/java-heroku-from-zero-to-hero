@@ -26,6 +26,13 @@ origin  https://github.com/alexr007/java-heroku.git (push)
 ```
 - push your code to heroku `git push heroku master`
 
+#### useful heroku command:
+
+- heroku ps
+- heroku open
+- heroku ps:scale web=1
+- heroku logs --tail
+
 ### Links
 
 - Heroku official documentation in general: [here](https://devcenter.heroku.com/articles/getting-started-with-java)
